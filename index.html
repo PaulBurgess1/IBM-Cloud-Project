@@ -5,12 +5,32 @@
     </head>
     <body>
         <h1>Simple Interest Calculator</h1>
+        <div id="main">
+            <table>
+                <tr>
+                    <td><label for="principle">Amount </label></td>
+                    <td><input type="number"  id="principal" value="1000000"></td>
+                </tr>
+                <tr>
+                    <td><label for="rate">Intrest Rate </label></td>
+                    <td><input type="range"  id="rate" min="0.0" max="100.0" step='.1' value="3.5" oninput="num_rate.value=rate.value">
+                        <output id="num_rate" name="num_rate" for="rate">3.5</output>%</td>
+                </tr>
+                <tr>
+                    <td><label for="years">No. of Years </label></td>
+                    <td><input type="number"  id="years" min="1" max="20" step="1" value="5"></td>
+                </tr>
+            </table>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+            <button onclick="compute()">Compute Interest</button>
+            <br>
+            <p id="p1"></p> <span id="prin"></span>
+            <p id="p2"></p> <span id="s_rate"></span>
+            <p id="p3"></p> <span id="result"></span>
+            <p id="p4"></p> <span id="s_year"></span>
+        </div>
     </body>
+    <footer>
+        <p>&copy; Everyone Can Get Rich</p>
+    </footer>
 </html>
