@@ -1,16 +1,21 @@
-body {background-color:rgb(255, 255, 255);}
-h1{color:grey;}
-
-#main {
-    margin-left: 4%;
-
+body {
+    background-color: black;
+    font: arial;
+    color: white;
 }
-#main label {
-    padding-right: 30px;
+h1{
+    color:grey;
+    font: verdana;
 }
-#main span {
+
+.maindiv {
+    background-color: white;
+    color: black;
+    width: 300px;
+    padding: 20px;
+    border-radius: 25px;
+    align-self: center;
+}
+.var {
     background-color: yellow;
-}
-#main p {
-    display: inline;
 }

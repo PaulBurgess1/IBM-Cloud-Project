@@ -1,19 +1,20 @@
 function compute()
 {
-    p = Number(document.getElementById("principal").value);
-    r = Number(document.getElementById("rate").value)/100;
-    y = Number(document.getElementById("years").value);
-    var amount= (p * r * y);
-    var new_year = (Number(new Date().getFullYear())+y);
-    document.getElementById("p1").innerHTML="If you deposit ";
-    document.getElementById("p2").innerHTML="at an intrest rate of ";
-    document.getElementById("p3").innerHTML="you will receive an amount of ";
-    document.getElementById("p4").innerHTML="in the year ";
+    principal = Number(document.getElementById("principal").value);
+    if (principal < 1){
+        alert("Enter a positive number")
+        document.getElementById("principal").focus()
+        return
+    }
+    rate = Number(document.getElementById("rate").value);
+    years = Number(document.getElementById("years").value);
 
-    document.getElementById("prin").innerHTML=document.getElementById("principal").value +",<br>";
-    document.getElementById("s_rate").innerHTML=document.getElementById("rate").value +" %<br>";
-    document.getElementById("result").innerHTML=String(amount) +",<br>";
-    document.getElementById("s_year").innerHTML=String(new_year)+"<br>";
-    
+    intrest = principal * years * rate /100;
+    new_year=(Number(new Date().getFullYear())+years);
+
+    document.getElementById("result").innerHTML="If you deposit <span class='var'>"+principal+"</span>,<br>at an interest rate of <span class='var'>"+ rate +"</span>%.<br>You will receive an amount of <span class='var'>"+intrest+"</span>,<br> in the year <span class='var'>"+new_year+"</span>"
 }
-        
+function range_change(){
+    document.getElementById("num_rate").innerHTML=document.getElementById("rate").value+"%"
+}
+    
